@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#lock-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#blob {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    animation: morph 4s infinite ease-in-out;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 50%;
+    }
+    50% {
+        border-radius: 30% 70% 60% 40% / 60% 30% 70% 40%;
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
+
+#main-ui {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.widget {
+    margin-bottom: 30px;
+    font-size: 48px;
+}
+
+.app-icon {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.app-icon:hover {
+    background-color: lightgray;
+}
